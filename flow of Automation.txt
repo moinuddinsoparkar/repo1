@@ -1,0 +1,8 @@
+flow of test :
+1. select the flight option(default)
+2. select the round trip 
+3. select the no of passenger to be travelling here 1 adult and 1 child
+4. select the from and to destination for flight
+5. click on search and redirect to next page
+6. check the checkbox box non-stop flights
+7. bydefault we get the low to high price og flight and book for the same 
