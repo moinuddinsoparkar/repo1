@@ -16,7 +16,7 @@ public class Flight_page extends Basic_Utility {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "((//input[@class='checkbox__input o-0'])[1]")
+	@FindBy(xpath = "(//div[@class='pt-3']//div[@class='flex flex-start p-relative flex-middle'])[1]")
 	private WebElement nonstop_Checkbox;
 
 	@FindBy(xpath = "//div[@data-test-attrib='onward-view']/div/div[1]")

@@ -73,16 +73,21 @@ public class Home_page extends BaseClass {
 	@FindBy(xpath = "//div/span[@class='fw-600 fs-4 lh-2 flex flex-middle']")
 	private WebElement search_btn;
 
+	// for scrolling //div[contains(text(),'Learn More')]
+	@FindBy(xpath = "//div[contains(text(),'Learn More')]")
+	private WebElement learnmore_btn;
+
 	public void selectFligt() {
 //		selecting the flight option 
 		clickOnElement(flight_Btn);
+		scrollDown(flight_Btn);
 	}
 
 	public void selectFlightAndPassengers() {
 //		click on drop drop and select round trip option
 		clickOnElement(drop_Btn);
 		clickOnElement(typeOfTrip_dropdown);
-		
+
 //		select 1 adult and 1 child as a passengers in economy class
 		clickOnElement(typeOfPassenger_dropdown);
 		clickOnElement(ChildPassenger_increment);
@@ -91,14 +96,18 @@ public class Home_page extends BaseClass {
 
 	public void select_Destination() {
 //		selecting the from and to destination example benglore to hyderabad
+		scrollDown(flight_Btn);
 		selectDestination(from_Dropdown, from_Destination);
 		selectDestination(to_Dropdown, to_Destination);
 	}
 
 	public void select_Date() {
 //		select the date for travelling and serach for the same
+		scrollDown(from_dateBtn);
 		selectDate(from_dateBtn, from_Date);
+//		scroll(driver, from_Date);
 		selectDate(to_dateBtn, to_Date);
+//		scroll(driver, to_Date);
 		clickOnElement(search_btn);
 	}
 
